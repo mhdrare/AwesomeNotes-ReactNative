@@ -19,24 +19,24 @@ export default class listNotes extends Component {
         return (
           <React.Fragment>
             <View style={styles.header}>
-              <TouchableOpacity style={styles.item} onPress={() => {this.props.navigation.openDrawer()}}>
-                <Image 
-                  style={styles.image}
-                  source={require('../../assets/img/profile.jpg')}>
-                </Image>
-              </TouchableOpacity>
-              <View style={styles.nameApp}>
-                <Text style={styles.title}>{'Awesome Notes'.toUpperCase()}</Text>
-              </View>
-              <TouchableOpacity style={styles.itemSort} onPress={() => this.changePopup(true)}>
-                <Image
-                  style={styles.imageSort}
-                  source={require('../../assets/img/sort.png')}>
-                </Image>
-              </TouchableOpacity>
-              <Modal transparent={true} visible={this.state.isModalVisible} onRequestClose={() => this.changePopup(false)} style={{width: 150}} animationType='fade'>
-                  <PopupSort changePopup={this.changePopup}/>
-              </Modal>
+                <TouchableOpacity style={styles.item} onPress={() => {this.props.navigation.openDrawer()}}>
+                    <Image 
+                      style={styles.image}
+                      source={require('../../assets/img/profile.jpg')}>
+                    </Image>
+                </TouchableOpacity>
+                <View style={styles.nameApp}>
+                    <Text style={styles.title}>{'Awesome Notes'.toUpperCase()}</Text>
+                </View>
+                <TouchableOpacity style={styles.itemSort} onPress={() => this.changePopup(true)}>
+                    <Image
+                        style={styles.imageSort}
+                        source={require('../../assets/img/sort.png')}>
+                    </Image>
+                </TouchableOpacity>
+                <Modal transparent={true} visible={this.state.isModalVisible} onRequestClose={() => this.changePopup(false)} style={{width: 150}} animationType='fade'>
+                    <PopupSort changePopup={this.changePopup}/>
+                </Modal>
             </View>
         </React.Fragment>
         );

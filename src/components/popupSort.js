@@ -7,6 +7,7 @@ export default class PopupSort extends React.Component {
 	}
 	render() {
 		return (
+		<TouchableOpacity onPress={() => this.closePopup()} style={{width: '100%', height: '100%'}}>
 			<TouchableOpacity disabled={true} activeOpacity={1} style={styles.modal}>
 				<View style={{backgroundColor: '#FFFFFF', elevation: 2}}>
 					<View style={{margin: 10, fontSize: 15}}>
@@ -22,6 +23,7 @@ export default class PopupSort extends React.Component {
 					</View>
 				</View>
 			</TouchableOpacity>
+		</TouchableOpacity>
 		)
 	}
 }

@@ -6,28 +6,34 @@ import Header from '../components/header/home';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class App extends Component {
-  handleNavigate = () => {
-      const { navigation } = this.props;
-      navigation.navigate('Notes');
-  }
-  render() {
-    return (
-      <React.Fragment>
-        <Header navigation={this.props.navigation} modal={this.state} />
-        <View style={styles.container}>
-          <View style={{width: '85%', alignSelf: 'center', margin: 20}} transparent={true}>
-            <TextInput placeholder="Search..." style={{ backgroundColor: '#FFFFFF', paddingLeft: 20, borderRadius: 50, elevation: 2, height: 40 }} />
-          </View>
-          <ScrollView>
-              <ListNotes />
-          </ScrollView>
-          <TouchableOpacity style={styles.fab} onPress={this.handleNavigate}>
-            <Image source={require('../assets/img/+.png')} />
-          </TouchableOpacity>
-        </View>
-      </React.Fragment>
-    );
-  }
+    constructor(props) {
+      super(props);
+    
+      this.state = {};
+    }
+
+    handleNavigate = () => {
+        const { navigation } = this.props;
+        navigation.navigate('Notes');
+    }
+    render() {
+        return (
+          <React.Fragment>
+            <Header navigation={this.props.navigation} modal={this.state} />
+            <View style={styles.container}>
+                <View style={{width: '85%', alignSelf: 'center', margin: 20}} transparent={true}>
+                    <TextInput placeholder="Search..." style={{ backgroundColor: '#FFFFFF', paddingLeft: 20, borderRadius: 50, elevation: 2, height: 40 }} />
+                </View>
+                <ScrollView>
+                    <ListNotes navigation={this.props.navigation}/>
+                </ScrollView>
+                <TouchableOpacity style={styles.fab} onPress={this.handleNavigate}>
+                    <Image source={require('../assets/img/+.png')} />
+                </TouchableOpacity>
+            </View>
+          </React.Fragment>
+        );
+    }
 }
 
 const styles = StyleSheet.create({

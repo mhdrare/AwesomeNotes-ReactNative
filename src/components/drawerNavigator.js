@@ -35,7 +35,7 @@ class PopupCategoryItem extends React.Component {
 				<Image source={require('../assets/img/plus.png')} style={{width: 20, height: 20}}/>
 				<Text style={styles.drawer}>Add Category</Text>
 			</TouchableOpacity>
-	    	<Modal transparent={true} visible={this.state.isModalVisible} onRequestClose={() => this.changePopup(false)} style={{width: 150}} animationType='fade'>
+	    	<Modal transparent={true} visible={this.state.isModalVisible} onRequestClose={() => this.changePopup(false)} style={{width: 150}}>
 		        <PopupCategory changePopup={this.changePopup}/>
 		    </Modal>
 		</React.Fragment>
