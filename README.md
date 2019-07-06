@@ -1,5 +1,10 @@
-<<<<<<< HEAD
-# AwesomeNotes
-=======
-# AwesomeNotes-FE
->>>>>>> bd6ec911eece1398738c799e2bbe93af0229b82f
+<h1 align="center">Awesome Notes - Frontend</h1>
+
+<div align="center">
+  <a href="#">
+    <img src="https://img.shields.io/badge/react--native-0.59.9-brightgreen.svg?style=flat-square" alt="react-native version">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/react--native--cli-2.0.1-blue.svg?style=flat-square" alt="react-native-cli version">
+  </a>
+</div>
