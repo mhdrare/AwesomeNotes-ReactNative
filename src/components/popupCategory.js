@@ -11,8 +11,8 @@ export default class PopupSort extends React.Component {
 				<TouchableOpacity disabled={true} activeOpacity={1} style={styles.modal}>
 					<View style={{backgroundColor: '#FFFFFF', elevation: 2, borderRadius: 5}}>
 						<View style={{margin: 10}}>
-							<TextInput style={{paddingLeft: 10, paddingRight: 10}} placeholder='Category Name'/>
-							<TextInput style={{paddingLeft: 10, paddingRight: 10}} placeholder='Category URL'/>
+							<TextInput style={styles.input} placeholder='Category Name'/>
+							<TextInput style={styles.input} placeholder='Category URL'/>
 						</View>
 						<View style={{margin: 10, fontSize: 15, flexDirection: 'row', alignSelf: 'flex-end'}}>
 							<TouchableOpacity>
@@ -45,5 +45,9 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		alignSelf: 'center',
 		top: 200
+	},
+	input: {
+		paddingLeft: 10, 
+		paddingRight: 10
 	}
 });

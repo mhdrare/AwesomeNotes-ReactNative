@@ -7,18 +7,15 @@ export default class PopupSort extends React.Component {
 	}
 	render() {
 		return (
-		<TouchableOpacity onPress={() => this.closePopup()} style={{width: '100%', height: '100%'}}>
+		<TouchableOpacity onPress={() => this.closePopup()} style={styles.full}>
 			<TouchableOpacity disabled={true} activeOpacity={1} style={styles.modal}>
 				<View style={{backgroundColor: '#FFFFFF', elevation: 2}}>
 					<View style={{margin: 10, fontSize: 15}}>
-						<TouchableHighlight>
-							<Text style={styles.title}>{'Ascending'.toUpperCase()}</Text>
-						</TouchableHighlight>
-						<TouchableHighlight>
-							<Text style={styles.title}>{'Descending'.toUpperCase()}</Text>
-						</TouchableHighlight>
 						<TouchableOpacity onPress={()=>this.closePopup()}>
-							<Text style={styles.title}>{'Cancel'.toUpperCase()}</Text>
+							<Text style={styles.title}>{'Ascending'.toUpperCase()}</Text>
+						</TouchableOpacity>
+						<TouchableOpacity onPress={()=>this.closePopup()}>
+							<Text style={styles.title}>{'Descending'.toUpperCase()}</Text>
 						</TouchableOpacity>
 					</View>
 				</View>
@@ -40,5 +37,9 @@ const styles = StyleSheet.create({
 		position: 'absolute', 
 		right: 10, 
 		top: 40
+	},
+	full: {
+		width: '100%', 
+		height: '100%'
 	}
 });

@@ -16,6 +16,7 @@ export default class App extends Component {
         const { navigation } = this.props;
         navigation.navigate('Notes');
     }
+    
     render() {
         return (
           <React.Fragment>
@@ -37,53 +38,53 @@ export default class App extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF',
-  },
-  flexbox: {
-    width: 138, 
-    height: 136, 
-    backgroundColor: '#2FC2DF',
-    margin: 14,
-    borderRadius: 5,
-    elevation: 3
-  },
-  textDate: {
-    margin: 5, 
-    fontSize: 10,
-    marginRight: 10, 
-    textAlign: 'right', 
-    color: '#FFFFFF'
-  },
-  textTitle: {
-    fontSize: 15, 
-    fontWeight: 'bold',
-    width: 109,
-    color: 'white', 
-    marginLeft: 15
-  },
-  textBottom: {
-    fontSize: 10,
-    color: '#FFFBFB', 
-    marginLeft: 15
-  },
-  textDescription: {
-    fontSize: 10,
-    color: '#FFFFFF', 
-    marginLeft: 15,
-    width: 120
-  },
-  fab: {
-    position: 'absolute', 
-    width: 58, 
-    height: 57, 
-    alignItems: 'center', 
-    justifyContent: 'center', 
-    right: 10, 
-    bottom: 30, 
-    backgroundColor: '#FFFCFC', 
-    borderRadius: 50, 
-    elevation: 3
-  }
+    container: {
+        flex: 1,
+        backgroundColor: '#F5FCFF',
+    },
+    flexbox: {
+        width: 138, 
+        height: 136, 
+        backgroundColor: '#2FC2DF',
+        margin: 14,
+        borderRadius: 5,
+        elevation: 3
+    },
+    textDate: {
+        margin: 5, 
+        fontSize: 10,
+        marginRight: 10, 
+        textAlign: 'right', 
+        color: '#FFFFFF'
+    },
+    textTitle: {
+        fontSize: 15, 
+        fontWeight: 'bold',
+        width: 109,
+        color: 'white', 
+        marginLeft: 15
+    },
+    textBottom: {
+        fontSize: 10,
+        color: '#FFFBFB', 
+        marginLeft: 15
+    },
+    textDescription: {
+        fontSize: 10,
+        color: '#FFFFFF', 
+        marginLeft: 15,
+        width: 120
+    },
+    fab: {
+        position: 'absolute', 
+        width: 58, 
+        height: 57, 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        right: 10, 
+        bottom: 30, 
+        backgroundColor: '#FFFCFC', 
+        borderRadius: 50, 
+        elevation: 3
+    }
 });
